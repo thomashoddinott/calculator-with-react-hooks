@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+/* https://gist.githubusercontent.com/NinjaAniket/8d0b4af12d9187672335c1ba9c03ed34/raw/ef588fe9e2b20fb77c47614a6f42198d51c8bfeb/ReactHooksCalculator.css */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.wrapper {
+  max-width: 420px;
+  min-height: 96vh;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  font-size: 2rem;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+.modifiers button {
+  background-color: #ccc;
+}
+.operations button {
+  background-color: orange;
+  width: 100px;
+}
+.digits button {
+  background-color: #efefef;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* All things Grid, Flexbox, Box Alignment */
+.wrapper,
+.subgrid {
+  display: grid;
+}
+.wrapper {
+  grid-template-areas:
+    "total total total total"
+    "modif modif modif oper"
+    "digit digit digit oper"
+    "digit digit digit oper"
+    "digit digit digit oper"
+    "digit digit digit oper";
+  grid-auto-columns: 1fr;
+}
+.show-input {
+  grid-area: total;
+  background-color: red;
+}
+.modifiers {
+  grid-area: modif;
+}
+.operations {
+  grid-area: oper;
+}
+.digits {
+  grid-area: digit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.show-input {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.modifiers {
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+.digits button {
+  flex: 1 0 26%;
 }
