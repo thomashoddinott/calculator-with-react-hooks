@@ -1,3 +1,7 @@
+//todo
+// - polish
+// - improve/fix evaluate - needs to handle division, etc.
+
 // readme: 
 // DIY:
 // npx create-react-app calculator-with-react-hooks
