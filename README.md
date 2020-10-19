@@ -1,4 +1,8 @@
-The code is live: https://thomashoddinott.github.io/calculator-with-react-hooks/
+### The code is live: https://thomashoddinott.github.io/calculator-with-react-hooks/
+
+### Calculator with React Hooks: https://www.youtube.com/watch?v=efhYDA8Hsk4
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
